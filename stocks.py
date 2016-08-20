@@ -1,7 +1,7 @@
 from googlefinance import getQuotes
 import json
 # in the requirement.txt add in  demjson
-def get_stock_information(stock_name):
+def get_stock_information(stocks_name):
     """returns a stocks:
     ExtHrsLastTradeDateTimeLong,
     Dividend,
@@ -23,7 +23,7 @@ def get_stock_information(stock_name):
     ExtHrsLastTradeWithCurrency.
     of any given NASDAQ stock
     """
-    return (json.dumps(getQuotes(stock_name)[0], indent=2))
+    return (json.dumps(getQuotes(stocks_name)[0], indent=2))
 
 
 

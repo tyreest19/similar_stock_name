@@ -1,6 +1,5 @@
 from bs4 import BeautifulSoup
 import urllib.request
-
 def find_trending_stocks():
     """Finds trending stock names from marketwatch.com/newsviewer and returns a list of trending stocks"""
     stock_news_website = urllib.request.urlopen('http://www.marketwatch.com/newsviewer').read() # gets httml from the site
@@ -10,10 +9,11 @@ def find_trending_stocks():
     for stock_names in stock_website_text:
         if  3 <= len(stock_names) <= 5 and str(stock_names).isupper() == True:
             list_of_trending_stocks.append(stock_names) # appending stock names to trending stock list
-    return  list_of_trending_stocks
+    return list_of_trending_stocks
 
 
-
+if __name__ == '__main__':
+    print(find_trending_stocks())
 
 
 

@@ -8,17 +8,6 @@ def similar_stock_name_checker(stock_name, similar_stock_name):
        file_with_stored_names.write('{} similar names are {}'.format(stock_name,similar_stock_name))
 
 
-
-
-
-
-
-
-
-
-
-
-
 if __name__ == '__main__':
     stock_name = input('stock name: ')
     suggest_name = input('similar name: ')
